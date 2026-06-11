@@ -3,29 +3,20 @@ import java.util.*;
 
 public class ReverseWords3 {
     public static String reverseWords(String s) {
-        s = s.strip();
-        int len = s.length();
-        String word = "";
-        String newStr = "";
-        for (int i = 0; i < len; i++) {
-            char ch = s.charAt(i);
-            if (ch != ' ') {
-                word = word + ch;
-            }
-            else{
-            for (int j = word.length()-1; j >= 0; j--) {
+        public static String reverseWords(String s) {
+            String[] words = s.trim().split("\\s+");
+            StringBuilder result = new StringBuilder();
 
-                newStr = newStr + word.charAt(j) ;
-            }
-                newStr += " ";
+            for (int i = 0; i < words.length; i++) {
+                result.append(new StringBuilder(words[i]).reverse());
 
-            word = "";
+                if (i < words.length - 1) {
+                    result.append(" ");
+                }
             }
+
+            return result.toString();
         }
-        for (int j = word.length() - 1; j >= 0; j--) {
-            newStr += word.charAt(j);
-        }
-        return newStr;
     }
 
     public static void main(String[] args) {
