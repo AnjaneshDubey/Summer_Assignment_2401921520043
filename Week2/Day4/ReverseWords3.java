@@ -2,7 +2,7 @@ package Week2.Day4;
 import java.util.*;
 
 public class ReverseWords3 {
-    public static String reverseWords(String s) {
+
         public static String reverseWords(String s) {
             String[] words = s.trim().split("\\s+");
             StringBuilder result = new StringBuilder();
@@ -17,7 +17,7 @@ public class ReverseWords3 {
 
             return result.toString();
         }
-    }
+
 
     public static void main(String[] args) {
         Scanner ad = new Scanner(System.in);
@@ -26,7 +26,7 @@ public class ReverseWords3 {
         System.out.println(reverseWords(s));
         ad.close();
     }
-
-
-
 }
+
+
+
